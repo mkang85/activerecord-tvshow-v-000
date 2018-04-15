@@ -5,7 +5,6 @@ class CreateShows < ActiveRecord::Migration
       t.string :network
       t.string :day
       t.integer :rating
-      t.boolean :in_theaters
     end
   end
 end
