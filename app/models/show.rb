@@ -7,4 +7,17 @@ class Show < ActiveRecord::Base
     x = self.highest_rating
     Show.find_by(rating: x)
   end
+
+  def self.lowest_rating
+    Show.minimum(:rating)
+  end
+
+  def self.least_popular_show
+    x = self.least_popular_show
+    Show.find_by(rating: x)
+  end
+
+  def self.ratings_sum
+    Show.sum(:rating)
+  end
 end
